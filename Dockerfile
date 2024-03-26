@@ -1,14 +1,12 @@
-# Use the official CentOS 7 base image
-FROM centos:centos7
-
-# Install the Apache HTTP server package from the CentOS repository
-RUN yum install httpd -y
+# Use the official Apache HTTP server image as the base image
+FROM httpd:latest
 
 # Copy the index.html file from the Docker build context to the default Apache document root directory in the container
-COPY index.html /var/www/html/
+COPY index.html /usr/local/apache2/htdocs/
 
-# Specify the command to run when the container starts, which starts the Apache HTTP server in the foreground
-CMD ["/usr/sbin/httpd","-D","FOREGROUND"]
+# Optionally, you can copy additional files or directories if needed
+# COPY css /usr/local/apache2/htdocs/css
+# COPY js /usr/local/apache2/htdocs/js
 
 # Expose port 80 to allow incoming HTTP traffic to the container
 EXPOSE 80
