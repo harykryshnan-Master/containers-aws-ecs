@@ -7,9 +7,143 @@
   <link rel="stylesheet" href="styles.css">
   <style>
     /* Additional CSS styles specific to this HTML file */
-    /* You can add more styles here if needed */
-    /* For example: */
-    /* .hero { background-image: url('background.jpg'); } */
+    body {
+      background-color: #f8f9fa;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar {
+      background-color: #343a40;
+      color: #ffffff;
+      padding: 20px 0;
+    }
+
+    .navbar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .navbar .logo {
+      color: #ffffff;
+      font-size: 24px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .navbar .menu {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar .menu li {
+      display: inline-block;
+      margin-right: 20px;
+    }
+
+    .navbar .menu li a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 18px;
+      transition: color 0.3s;
+    }
+
+    .navbar .menu li a:hover {
+      color: #ffc107;
+    }
+
+    .hero {
+      background-color: #007bff;
+      color: #ffffff;
+      text-align: center;
+      padding: 100px 0;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
+
+    .hero .btn {
+      background-color: #ffc107;
+      color: #343a40;
+      padding: 15px 30px;
+      font-size: 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .hero .btn:hover {
+      background-color: #ffca28;
+    }
+
+    .features {
+      background-color: #f8f9fa;
+      padding: 80px 0;
+    }
+
+    .features h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 36px;
+      color: #343a40;
+    }
+
+    .feature {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .feature img {
+      width: 100px;
+      height: auto; /* Adjust image height automatically */
+      margin-bottom: 20px;
+      display: block; /* Ensure images are displayed as blocks */
+      margin: 0 auto; /* Center align images */
+    }
+
+    .feature h3 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #343a40;
+    }
+
+    .feature p {
+      font-size: 18px;
+      color: #6c757d;
+    }
+
+    .footer {
+      background-color: #343a40;
+      color: #ffffff;
+      text-align: center;
+      padding: 30px 0;
+    }
+
+    .footer p {
+      font-size: 18px;
+    }
+
+    /* Animation */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .animated {
+      animation-duration: 1s;
+      animation-fill-mode: both;
+      animation-name: fadeIn;
+    }
   </style>
 </head>
 <body>
@@ -28,7 +162,7 @@
 
 <header class="hero">
   <div class="container">
-    <h1 class="animated">WEB APPLICATION DEPLOYMENT TO ECS TUTORIAL BY HELEN</h1>
+    <h1 class="animated">WEB APPLICATION SUCESSFULLY DEPLOYED IN ECS</h1>
     <p class="animated">Feels good learning Containerization with Docker and Deployment to Amazon ECS</p>
     <a href="#" class="btn">Get Started</a>
   </div>
@@ -36,18 +170,17 @@
 
 <section class="features">
   <div class="container">
-    <h2>Key Features</h2>
+    <h2 class="animated">Key Features</h2>
     <div class="feature">
-      <img src="icon1.png" alt="Feature 1">
-      <h3>Feature 1</h3>
-      <p>Description of feature 1.</p>
+      <img src="https://via.placeholder.com/100/ff0000/ffffff?text=AWS" alt="Feature 1">
+      <h3>AWS Integration</h3>
+      <p>Seamless integration with Amazon Web Services for scalable deployments.</p>
     </div>
     <div class="feature">
-      <img src="icon2.png" alt="Feature 2">
-      <h3>Feature 2</h3>
-      <p>Description of feature 2.</p>
+      <img src="https://via.placeholder.com/100/00ff00/ffffff?text=Docker" alt="Feature 2">
+      <h3>Docker Support</h3>
+      <p>Containerization using Docker for easy deployment and management.</p>
     </div>
-    <!-- Add more features as needed -->
   </div>
 </section>
 
