@@ -1,5 +1,5 @@
 # Use the official Apache HTTP server image as the base image
-FROM httpd:latest
+FROM httpd:2.4.66-trixie
 
 # Copy the index.html file from the Docker build context to the default Apache document root directory in the container
 COPY index.html /usr/local/apache2/htdocs/
